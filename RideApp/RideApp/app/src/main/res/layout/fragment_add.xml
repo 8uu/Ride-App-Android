@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+        <LinearLayout
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            tools:context=".FragmentHome"
+            android:background="#fff"
+            android:alpha="0.9"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/add_label"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14pt" />
+
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/destinatie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:layout_marginTop="70dp"
+                    android:hint="@string/destinatie"
+                    android:textColor="#000"/>
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/loc_plecare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:hint="@string/loc_plecare"
+                    android:textColor="#000"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_nrLocuri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:text="@string/locuri_disponibile"
+                            android:textSize="18sp"
+                            android:textColor="#000"/>
+
+                        <Spinner
+                            android:id="@+id/spinner_locuri"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:paddingLeft="30dp"
+                            android:layout_toRightOf="@id/tv_nrLocuri"/>
+
+                        <TextView
+                            android:id="@+id/tv_pret"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pret_loc"
+                            android:layout_marginTop="120dp"
+                            android:textSize="18sp"
+                            android:textColor="#000"/>
+
+                        <EditText
+                            android:id="@+id/et_pret"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:layout_marginTop="115dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_toEndOf="@id/tv_pret"
+                            android:padding="5dp"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tv_ron"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/et_pret"
+                            android:layout_marginTop="120dp"
+                            android:text="RON"
+                            android:textSize="18sp"
+                            android:textColor="#000"/>
+
+                        <TextView
+                            android:id="@+id/tv_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="45dp"
+                            android:layout_marginTop="200dp"
+                            android:text="@string/data"
+                            android:textSize="18sp"
+                            android:textColor="#000"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp">
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tiet_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="190dp"
+                            android:layout_marginEnd="40dp"
+                            android:hint="@string/dd_mm_yyyy"
+                            android:textAlignment="center"
+                            android:layout_toEndOf="@+id/tv_data"
+                            android:textColor="#000"/>
+                </RelativeLayout>
+
+                <Switch
+                    android:id="@+id/sw_locBagaj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:text="@string/loc_bagaj"
+                    android:switchPadding="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/add"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000"
+                    android:background="@drawable/arrow"/>
+
+        </LinearLayout>
+
+        <!-- Acest control va fi folosit doar pentru proprietatea marginTop,
+         pentru a creea un efect de scroll in gol, astfel incat formularul sa
+          fie vizibil corect si pe ecrane mai mici-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp" />
+</LinearLayout>
+</ScrollView>
