@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FeedbacksActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        app:cardBackgroundColor="#E6FFFFFF"
+        app:cardCornerRadius="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1250px"
+            android:text="@string/Mesaje"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="12pt"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"/>
+
+        <ListView
+            android:id="@+id/feedbacks_rides"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:padding="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        app:cardBackgroundColor="#E6FFFFFF">
+
+        <EditText
+            android:id="@+id/feedback_et"
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:layout_marginTop="60dp"
+            android:padding="20dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"/>
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/trimite_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/trimite"
+        android:layout_margin="20dp"
+        />
+    <!-- Acest control va fi folosit doar pentru proprietatea marginTop,
+         pentru a creea un efect de scroll in gol, astfel incat formularul sa
+          fie vizibil corect si pe ecrane mai mici-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+
+</LinearLayout>
+
+</ScrollView>

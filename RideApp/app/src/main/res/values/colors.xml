@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="colorPrimary">#006399</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="colorSecundary">#006399</color>
-    <color name="button_pressed">#27598B</color>
-    <color name="button_free">#2C78C7</color>
-</resources>
